@@ -10,12 +10,14 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+
+
+    
     return MaterialApp(
-      theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(),
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const HomeScreen()
-    );
+        theme: ThemeData(
+          textTheme: GoogleFonts.poppinsTextTheme(),
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const HomeScreen());
   }
 }
