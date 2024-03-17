@@ -29,7 +29,7 @@ class Services extends StatelessWidget {
           children: [
             cardItems(title: "WATER", image: "images/water.png"),
             cardItems(
-              title: "ENETERTAINMENT",
+              title: "ENTERTAINMENT",
               image: "images/entertainment.png",
             ),
           ],
