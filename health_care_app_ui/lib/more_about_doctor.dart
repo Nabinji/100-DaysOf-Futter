@@ -17,12 +17,15 @@ class MoreAboutDoctor extends StatelessWidget {
             left: 0,
             right: 0,
             height: MediaQuery.of(context).size.height * 0.45,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              color: doctor.containerColor,
-              child: Image.asset(
-                doctor.image,
-                fit: BoxFit.fitHeight,
+            child: Hero(
+              tag: doctor.image,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                color: doctor.containerColor,
+                child: Image.asset(
+                  doctor.image,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
           ),

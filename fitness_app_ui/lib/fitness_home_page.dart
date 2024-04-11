@@ -77,89 +77,92 @@ class FitnessHomePage extends StatelessWidget {
                   final fitness = userItems[index];
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: fitness.color,
-                      ),
-                      height: 190,
-                      width: 95,
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  DetailScreen(fitness: fitness),
-                            ),
-                          );
-                        },
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  fitness.name,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 30),
-                                ),
-                                const SizedBox(
-                                  height: 7,
-                                ),
-                                Text(
-                                  "with ${fitness.instructor}",
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black45,
-                                      fontSize: 18),
-                                ),
-                                const SizedBox(
-                                  height: 35,
-                                ),
-                                Container(
-                                  height: 45,
-                                  width: 130,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(40)),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(Icons.play_arrow),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        "${fitness.time} min",
-                                        style: const TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            // For image
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10),
-                              child: Container(
-                                height: 190,
-                                width: MediaQuery.of(context).size.width / 2.1,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                  fitness.image,
-                                ))),
+                    child: Hero(
+                      tag: fitness.color,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          color: fitness.color,
+                        ),
+                        height: 190,
+                        width: 95,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    DetailScreen(fitness: fitness),
                               ),
-                            )
-                          ],
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              const SizedBox(
+                                width: 30,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    fitness.name,
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30),
+                                  ),
+                                  const SizedBox(
+                                    height: 7,
+                                  ),
+                                  Text(
+                                    "with ${fitness.instructor}",
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black45,
+                                        fontSize: 18),
+                                  ),
+                                  const SizedBox(
+                                    height: 35,
+                                  ),
+                                  Container(
+                                    height: 45,
+                                    width: 130,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(40)),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.play_arrow),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          "${fitness.time} min",
+                                          style: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              // For image
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Container(
+                                  height: 190,
+                                  width: MediaQuery.of(context).size.width / 2.1,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                    fitness.image,
+                                  ))),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),

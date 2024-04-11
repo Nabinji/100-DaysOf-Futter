@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:travel_app_ui/Model/model.dart';
 
 class MoreDetail extends StatelessWidget {
@@ -19,83 +20,86 @@ class MoreDetail extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   color: Colors.white,
                 ),
-                Container(
-                  height: MediaQuery.of(context).size.height / 2.25,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(location.image), fit: BoxFit.fill),
-                      borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(70))),
-                  child: Stack(
-                    children: [
-                      // for name address and location icon,
-                      Positioned(
-                        top: 320,
-                        left: 150,
-                        child: Column(
-                          children: [
-                            Text(
-                              location.name,
-                              style: const TextStyle(
-                                  fontSize: 25,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.location_on,
-                                  size: 30,
-                                  color: Colors.white,
-                                ),
-                                Text(
-                                  location.address,
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      // For back button
-                      Positioned(
-                        top: 50,
-                        left: 5,
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Icon(
-                            Icons.arrow_back,
-                            size: 30,
-                            color: Colors.white,
+                Hero(
+                  tag: location.image,
+                  child: Container(
+                    height: MediaQuery.of(context).size.height / 2.25,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(location.image), fit: BoxFit.fill),
+                        borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(70))),
+                    child: Stack(
+                      children: [
+                        // for name address and location icon,
+                        Positioned(
+                          top: 320,
+                          left: 150,
+                          child: Column(
+                            children: [
+                              Text(
+                                location.name,
+                                style: const TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.location_on,
+                                    size: 30,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    location.address,
+                                    style: const TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ],
+                              )
+                            ],
                           ),
                         ),
-                      ),
-                      // for bookmark icon
-                      Positioned(
-                        top: 50,
-                        right: 15,
-                        child: Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                              color: Colors.white38,
-                              borderRadius: BorderRadius.circular(200)),
+                        // For back button
+                        Positioned(
+                          top: 50,
+                          left: 5,
                           child: GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
                             child: const Icon(
-                              Icons.bookmark,
+                              Icons.arrow_back,
                               size: 30,
                               color: Colors.white,
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                        // for bookmark icon
+                        Positioned(
+                          top: 50,
+                          right: 15,
+                          child: Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                                color: Colors.white38,
+                                borderRadius: BorderRadius.circular(200)),
+                            child: GestureDetector(
+                              child: const Icon(
+                                Icons.bookmark,
+                                size: 30,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

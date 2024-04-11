@@ -176,10 +176,13 @@ class HomePage extends StatelessWidget {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.only(left: 20),
-                                      child: CircleAvatar(
-                                        backgroundImage:
-                                            AssetImage(doctor.image),
-                                        radius: 40,
+                                      child: Hero(
+                                        tag: doctor.image,
+                                        child: CircleAvatar(
+                                          backgroundImage:
+                                              AssetImage(doctor.image),
+                                          radius: 40,
+                                        ),
                                       ),
                                     ),
                                     Padding(

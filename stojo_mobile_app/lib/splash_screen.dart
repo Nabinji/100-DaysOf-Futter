@@ -15,14 +15,21 @@ class _SplashScreenState extends State<SplashScreen> {
   // for navigtion and transaction
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 1), () {
-      Navigator.of(context).pushReplacement(PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) =>
-              const StojoHomePage(),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            return ScaleTransition(scale: animation, child: child);
-          }));
-    });
+    Timer(
+      const Duration(seconds: 1),
+      () {
+        Navigator.of(context).pushReplacement(
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) =>
+                const StojoHomePage(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return ScaleTransition(scale: animation, child: child);
+            },
+          ),
+        );
+      },
+    );
   }
 
   @override

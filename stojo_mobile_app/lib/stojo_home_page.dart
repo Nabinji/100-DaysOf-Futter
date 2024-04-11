@@ -85,29 +85,30 @@ class _StojoHomePageState extends State<StojoHomePage> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 12),
-                          child: Container(
-                            height: 285,
-                            decoration: BoxDecoration(
-                                color: stojo.color,
-                                borderRadius: BorderRadius.circular(30)),
-                            child: Center(
-                              child: Stack(
-                                children: [
-                                  const CircleAvatar(
-                                    backgroundColor: Colors.white,
-                                    radius: 65,
-                                  ),
-                                  Hero(
-                                      tag: "stojo11",
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 25, left: 12),
-                                        child: Image.asset(
-                                          stojo.image,
-                                          height: 180,
-                                        ),
-                                      ))
-                                ],
+                          child: Hero(
+                            tag: stojo.color,
+                            child: Container(
+                              height: 285,
+                              decoration: BoxDecoration(
+                                  color: stojo.color,
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: Center(
+                                child: Stack(
+                                  children: [
+                                    const CircleAvatar(
+                                      backgroundColor: Colors.white,
+                                      radius: 65,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 25, left: 12),
+                                      child: Image.asset(
+                                        stojo.image,
+                                        height: 180,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),

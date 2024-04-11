@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_animation/Model/scrol_list_model.dart';
+
+import 'Model/scrol_list_model.dart';
 
 class MyHomePages extends StatefulWidget {
   const MyHomePages({super.key});

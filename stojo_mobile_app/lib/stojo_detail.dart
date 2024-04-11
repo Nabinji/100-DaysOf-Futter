@@ -16,30 +16,30 @@ class DetailStojo extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height / 1.8,
-                  decoration: BoxDecoration(
-                      color: stojo.color,
-                      borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(50))),
-                  child: Row(
-                    children: [
-                      // for image
-                      Expanded(
-                        flex: 6,
-                        child: Center(
-                          child: Stack(
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(right: 5),
-                                child: CircleAvatar(
-                                  radius: 130,
-                                  backgroundColor: Colors.white,
+                Hero(
+                  tag: stojo.color,
+                  child: Container(
+                    height: MediaQuery.of(context).size.height / 1.8,
+                    decoration: BoxDecoration(
+                        color: stojo.color,
+                        borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(50))),
+                    child: Row(
+                      children: [
+                        // for image
+                        Expanded(
+                          flex: 6,
+                          child: Center(
+                            child: Stack(
+                              children: [
+                                const Padding(
+                                  padding: EdgeInsets.only(right: 5),
+                                  child: CircleAvatar(
+                                    radius: 130,
+                                    backgroundColor: Colors.white,
+                                  ),
                                 ),
-                              ),
-                              Hero(
-                                tag: "stojo11",
-                                child: Padding(
+                                Padding(
                                   padding:
                                       const EdgeInsets.only(left: 40, top: 30),
                                   child: Image.asset(
@@ -48,89 +48,90 @@ class DetailStojo extends StatelessWidget {
                                     width: 190,
                                   ),
                                 ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          color: stojo.sideColor,
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Image.asset(
-                                  "Images/shopping bag.png",
-                                  color: Colors.white,
-                                  width: 100,
-                                  height: 100,
-                                ),
-                                const SizedBox(
-                                  height: 40,
-                                ),
-                                Column(
-                                  children: [
-                                    const CircleAvatar(
-                                      radius: 8,
-                                      backgroundColor: Colors.black,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    CircleAvatar(
-                                      radius: 12,
-                                      backgroundColor: Colors.white,
-                                      child: CircleAvatar(
-                                        radius: 8,
-                                        backgroundColor: stojo.color,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    const CircleAvatar(
-                                      radius: 8,
-                                      backgroundColor: Colors.blueGrey,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    const CircleAvatar(
-                                      radius: 8,
-                                      backgroundColor: Colors.green,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    const CircleAvatar(
-                                      radius: 8,
-                                      backgroundColor: Colors.pink,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  height: 30,
-                                ),
-                                const Icon(
-                                  Icons.favorite_border,
-                                  color: Colors.white,
-                                  size: 35,
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
                               ],
                             ),
                           ),
                         ),
-                      )
-                    ],
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            color: stojo.sideColor,
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset(
+                                    "Images/shopping bag.png",
+                                    color: Colors.white,
+                                    width: 100,
+                                    height: 100,
+                                  ),
+                                  const SizedBox(
+                                    height: 40,
+                                  ),
+                                  Column(
+                                    children: [
+                                      const CircleAvatar(
+                                        radius: 8,
+                                        backgroundColor: Colors.black,
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 12,
+                                        backgroundColor: Colors.white,
+                                        child: CircleAvatar(
+                                          radius: 8,
+                                          backgroundColor: stojo.color,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const CircleAvatar(
+                                        radius: 8,
+                                        backgroundColor: Colors.blueGrey,
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const CircleAvatar(
+                                        radius: 8,
+                                        backgroundColor: Colors.green,
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const CircleAvatar(
+                                        radius: 8,
+                                        backgroundColor: Colors.pink,
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 30,
+                                  ),
+                                  const Icon(
+                                    Icons.favorite_border,
+                                    color: Colors.white,
+                                    size: 35,
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 // for back button

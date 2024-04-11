@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       padding: const EdgeInsets.only(
                                           top: 20, left: 30),
                                       child: Hero(
-                                        tag: "hero",
+                                        tag: location.image,
                                         child: Container(
                                           height: 390,
                                           width: 260,

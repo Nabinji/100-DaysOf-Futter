@@ -151,60 +151,63 @@ class DetailScreen extends StatelessWidget {
     );
   }
 
-  Container displayImage(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.47,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        color: fitness.color,
-        image: DecorationImage(
-            image: AssetImage(
-              fitness.image,
-            ),
-            fit: BoxFit.fill),
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(60),
-          topRight: Radius.circular(60),
+  Hero displayImage(BuildContext context) {
+    return Hero(
+      tag: fitness.color,
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.47,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          color: fitness.color,
+          image: DecorationImage(
+              image: AssetImage(
+                fitness.image,
+              ),
+              fit: BoxFit.fill),
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(60),
+            topRight: Radius.circular(60),
+          ),
         ),
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-              bottom: 50,
-              left: 30,
-              child: Text(
-                fitness.name,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 45,
+        child: Stack(
+          children: [
+            Positioned(
+                bottom: 50,
+                left: 30,
+                child: Text(
+                  fitness.name,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 45,
+                  ),
+                )),
+            Positioned(
+              bottom: 55,
+              right: 30,
+              child: Container(
+                height: 45,
+                width: 130,
+                decoration: BoxDecoration(
+                    color: Colors.white, borderRadius: BorderRadius.circular(40)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.play_arrow),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "${fitness.time} min",
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
+                  ],
                 ),
-              )),
-          Positioned(
-            bottom: 55,
-            right: 30,
-            child: Container(
-              height: 45,
-              width: 130,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(40)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.play_arrow),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "${fitness.time} min",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
-                ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
