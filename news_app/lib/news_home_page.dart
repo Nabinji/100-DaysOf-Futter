@@ -13,8 +13,8 @@ class NewsHomePage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
                 "Explore",
