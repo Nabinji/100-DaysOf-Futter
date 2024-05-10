@@ -7,11 +7,9 @@ class WeatherServices {
   fetchWeather() async {
     final response = await http.get(
       Uri.parse(
-          "https://api.openweathermap.org/data/2.5/weather?lat=48.8575&lon=2.3514&appid=509079b22fae7e954dff8403ef5eba0e"),
+          "https://api.openweathermap.org/data/2.5/weather?lat=28.5175&lon=81.7787&appid=509079b22fae7e954dff8403ef5eba0e"),
     );
     // now we can cange latitude and longitude and let's see how it perfrom.
-    // add some mistkae in link and try.
-    // all done thanks for wathing.
     try {
       if (response.statusCode == 200) {
         var json = jsonDecode(response.body);

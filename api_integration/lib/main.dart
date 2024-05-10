@@ -1,4 +1,4 @@
-import 'package:api_integration/Dictionary%20App/dictionary_screen.dart';
+import 'package:api_integration/Seperate%20Category/seperate_cayegory.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DictionaryHomePage(),
+      home: ProductCategoriesScreen(),
     );
   }
 }
