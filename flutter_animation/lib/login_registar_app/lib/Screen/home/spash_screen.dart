@@ -9,8 +9,6 @@ class MySplashScreen extends StatefulWidget {
   @override
   State<MySplashScreen> createState() => _MySplashScreenState();
 }
-
-
 class _MySplashScreenState extends State<MySplashScreen> {
   bool first = true;
   double fontsize = 20;
