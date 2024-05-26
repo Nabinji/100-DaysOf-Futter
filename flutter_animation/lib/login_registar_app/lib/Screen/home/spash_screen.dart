@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_registar_app/Screen/home/sign_in.dart';
-import 'package:login_registar_app/Screen/home/Utils/colors.dart';
+import 'package:login_registar_app/Screen/Utils/colors.dart';
 import 'package:get/route_manager.dart';
 
 class MySplashScreen extends StatefulWidget {

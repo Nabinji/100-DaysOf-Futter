@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:login_registar_app/Screen/home/Utils/colors.dart';
+import 'package:login_registar_app/Screen/Utils/colors.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
