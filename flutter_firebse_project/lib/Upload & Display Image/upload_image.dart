@@ -195,3 +195,13 @@ class _UploadImageState extends State<UploadImage> {
     );
   }
 }
+ //  StreamBuilder(
+      //   stream: FirebaseAuth.instance.authStateChanges(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.hasData) {
+      //       return const HomeScreen();
+      //     } else {
+      //       return const LoginScreen();
+      //     }
+      //   },
+      // ),

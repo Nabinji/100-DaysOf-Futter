@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_project/Login%20Signup/Widget/button.dart';
+import 'package:flutter_firebase_project/Login%20With%20Google/google_auth.dart';
+import 'package:flutter_firebase_project/Password%20Forgot/forgot_password.dart';
+import 'package:flutter_firebase_project/Phone%20Auth/phone_login.dart';
 
 import '../Services/authentication.dart';
 import '../Widget/snackbar.dart';
@@ -65,7 +68,10 @@ class _SignupScreenState extends State<LoginScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: height / 2.7,child: Image.asset('images/login.jpg'),),
+            SizedBox(
+              height: height / 2.7,
+              child: Image.asset('images/login.jpg'),
+            ),
             TextFieldInput(
                 icon: Icons.person,
                 textEditingController: emailController,
@@ -78,46 +84,107 @@ class _SignupScreenState extends State<LoginScreen> {
               textInputType: TextInputType.text,
               isPass: true,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 35),
-              child: Align(
-                alignment: FractionalOffset.centerRight,
-                child: Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.blue,
-                  ),
+            //  we call our forgot password below the login in button
+            const ForgotPassword(),
+            MyButtons(onTap: loginUser, text: "Log In"),
+
+            Row(
+              children: [
+                Expanded(
+                  child: Container(height: 1, color: Colors.black26),
+                ),
+                const Text("  or  "),
+                Expanded(
+                  child: Container(height: 1, color: Colors.black26),
+                )
+              ],
+            ),
+            // for google login
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+              child: ElevatedButton(
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey),
+                onPressed: () async {
+                  await FirebaseServices().signInWithGoogle();
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Image.network(
+                        "https://ouch-cdn2.icons8.com/VGHyfDgzIiyEwg3RIll1nYupfj653vnEPRLr0AeoJ8g/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvODg2/LzRjNzU2YThjLTQx/MjgtNGZlZS04MDNl/LTAwMTM0YzEwOTMy/Ny5wbmc.png",
+                        height: 35,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    const Text(
+                      "Continue with Google",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
-            MyButtons(onTap: loginUser, text: "Log In"),
-            SizedBox(
-              height: height / 15,
+           // for phone authentication 
+           const PhoneAuthentication(),
+            // Don't have an account? got to signup screen
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 100),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account? "),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const SignupScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      "SignUp",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  )
+                ],
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text("Don't have an account? "),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const SignupScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    "SignUp",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                )
-              ],
-            )
           ],
         ),
       )),
+    );
+  }
+
+  Container socialIcon(image) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 32,
+        vertical: 15,
+      ),
+      decoration: BoxDecoration(
+        color: const Color(0xFFedf0f8),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: Colors.black45,
+          width: 2,
+        ),
+      ),
+      child: Image.network(
+        image,
+        height: 40,
+      ),
     );
   }
 }

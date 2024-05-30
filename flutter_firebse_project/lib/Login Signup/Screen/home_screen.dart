@@ -1,7 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_project/Login%20Signup/Widget/button.dart';
 
-import '../Services/authentication.dart';
+import '../../Login With Google/google_auth.dart';
+import '../Widget/button.dart';
 import 'login.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,9 +20,10 @@ class HomeScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
+
             MyButtons(
                 onTap: () async {
-                  await AuthMethod().signOut();
+                  await FirebaseServices().googleSignOut();
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
                       builder: (context) => const LoginScreen(),
@@ -29,6 +31,10 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 text: "Log Out"),
+            // for google sign in ouser detail
+            // Image.network("${FirebaseAuth.instance.currentUser!.photoURL}"),
+            // Text("${FirebaseAuth.instance.currentUser!.email}"),
+            // Text("${FirebaseAuth.instance.currentUser!.displayName}")
           ],
         ),
       ),
