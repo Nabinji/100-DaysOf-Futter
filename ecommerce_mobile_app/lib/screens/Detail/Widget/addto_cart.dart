@@ -1,4 +1,4 @@
-import 'package:ecommerce_mobile_app/Provider/cart_provider.dart';
+import 'package:ecommerce_mobile_app/Provider/add_to_cart_provider.dart';
 import 'package:ecommerce_mobile_app/constants.dart';
 import 'package:ecommerce_mobile_app/models/product_model.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +63,7 @@ class _AddToCartState extends State<AddToCart> {
                   const SizedBox(width: 5),
                   IconButton(
                     onPressed: () {
-                        setState(() {
+                      setState(() {
                         currentIndex++;
                       });
                     },
@@ -78,7 +78,8 @@ class _AddToCartState extends State<AddToCart> {
             ),
             GestureDetector(
               onTap: () {
-                provider.toggleFavorite(widget.product);
+                provider.toogleFavorite(widget.product);
+                // if items is add then show this snackbar
                 const snackBar = SnackBar(
                   content: Text(
                     "Successfully added!",

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../models/product_model.dart';
 
 class CartProvider extends ChangeNotifier {
   final List<Product> _cart = [];
   List<Product> get cart => _cart;
-  void toggleFavorite(Product product) {
+  void toogleFavorite(Product product) {
+    // toogleFavorite is just a name you can give what ever you wants to
+
     if (_cart.contains(product)) {
       for (Product element in _cart) {
         element.quantity++;
@@ -16,11 +19,13 @@ class CartProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+// for increment
   incrementQtn(int index) {
     _cart[index].quantity++;
     notifyListeners();
   }
 
+  // for decrement
   decrementQtn(int index) {
     if (_cart[index].quantity <= 1) {
       return;
@@ -29,18 +34,16 @@ class CartProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // for total amount
   totalPrice() {
-    double total1 = 0.0;
+    double myTotal = 0.0; // initial
     for (Product element in _cart) {
-      total1 += element.price * element.quantity;
+      myTotal += element.price * element.quantity;
     }
-    return total1;
+    return myTotal;
   }
 
-  static CartProvider of(
-    BuildContext context, {
-    bool listen = true,
-  }) {
+  static CartProvider of(BuildContext context, {bool listen = true}) {
     return Provider.of<CartProvider>(
       context,
       listen: listen,

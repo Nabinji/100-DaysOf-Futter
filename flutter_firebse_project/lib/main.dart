@@ -1,9 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_project/Login%20Signup/Screen/login.dart';
-
-import 'Login Signup/Screen/home_screen.dart';
+import 'Real Time Database/query_in_realtime.dart';
 
 Future<void> main() async {
   // Initialize Firebase
@@ -19,18 +16,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return const HomeScreen();
-          } else {
-            return const LoginScreen();
-          }
-        },
-      ),
+      home: RealTimeDatabaseQueary(),
     );
   }
 }
+// Before start the video setup your project with firebase
+// If you have any problem to setup then firebase setup video is in i button and description

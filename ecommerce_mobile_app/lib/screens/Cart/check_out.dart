@@ -1,11 +1,9 @@
+import 'package:ecommerce_mobile_app/Provider/add_to_cart_provider.dart';
+import 'package:ecommerce_mobile_app/constants.dart';
 import 'package:flutter/material.dart';
-import '../../Provider/cart_provider.dart';
-import '../../constants.dart';
 
 class CheckOutBox extends StatelessWidget {
-  const CheckOutBox({
-    super.key,
-  });
+  const CheckOutBox({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +15,11 @@ class CheckOutBox extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(30),
-          topLeft: Radius.circular(30),
+          bottomLeft: Radius.circular(30),
         ),
       ),
       padding: const EdgeInsets.all(20),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextField(
             decoration: InputDecoration(
@@ -36,20 +33,20 @@ class CheckOutBox extends StatelessWidget {
               ),
               filled: true,
               fillColor: kcontentColor,
-              hintText: "Enter Discount Code",
+              hintText: "Enter Discoutn Code",
               hintStyle: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
                 color: Colors.grey,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
               ),
               suffixIcon: TextButton(
                 onPressed: () {},
                 child: const Text(
                   "Apply",
                   style: TextStyle(
-                    color: kprimaryColor,
-                    fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: kprimaryColor,
                   ),
                 ),
               ),
@@ -60,18 +57,18 @@ class CheckOutBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                "Subtotal",
+                "SbuTotal",
                 style: TextStyle(
-                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey,
+                  fontSize: 16,
                 ),
               ),
               Text(
                 "\$${provider.totalPrice()}",
                 style: const TextStyle(
-                  fontSize: 16,
                   fontWeight: FontWeight.bold,
+                  fontSize: 16,
                 ),
               )
             ],
@@ -83,39 +80,39 @@ class CheckOutBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                "Total",
+                "total",
                 style: TextStyle(
-                  fontSize: 18,
                   fontWeight: FontWeight.bold,
+                  fontSize: 18,
                 ),
               ),
               Text(
                 "\$${provider.totalPrice()}",
                 style: const TextStyle(
-                  fontSize: 18,
                   fontWeight: FontWeight.bold,
+                  fontSize: 18,
                 ),
               )
             ],
           ),
           const SizedBox(height: 20),
           ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: kprimaryColor,
-              minimumSize: const Size(double.infinity, 55),
-            ),
-            child: const Text(
-              "Check out",
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: kprimaryColor,
+                minimumSize: const Size(double.infinity, 55),
               ),
-            ),
-          ),
+              onPressed: () {},
+              child: const Text(
+                "Check Out",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ))
         ],
       ),
     );
   }
 }
+// now we add the provider and display the total price

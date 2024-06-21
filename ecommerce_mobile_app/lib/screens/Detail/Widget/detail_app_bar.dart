@@ -42,11 +42,13 @@ class DetailAppBar extends StatelessWidget {
             onPressed: () {
               provider.toggleFavorite(product);
             },
-            icon:  Icon(
-              provider.isExist(product) ?
-              Icons.favorite :Icons.favorite_border,
-              color: Colors.black,size: 25,
-              ),
+            icon: Icon(
+              provider.isExist(product)
+                  ? Icons.favorite
+                  : Icons.favorite_border,
+              color: Colors.black,
+              size: 25,
+            ),
           ),
         ],
       ),

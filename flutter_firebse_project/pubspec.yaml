@@ -19,6 +19,11 @@ dependencies:
   image_picker: ^1.1.1
   firebase_auth: ^4.19.6
   google_sign_in: ^6.2.1
+  firebase_database: ^10.5.7
+  file_picker: ^8.0.5
+  fluttertoast: ^8.2.6
+  flutter_pdfview: ^1.3.2
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
