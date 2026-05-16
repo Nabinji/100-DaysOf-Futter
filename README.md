@@ -10,7 +10,7 @@
 
 <br/>
 
-**100 days. 100 videos. 100 commits. Zero days off.**
+**100 days. 100 videos. 100 lessons. Zero days off.**
 
 *Every single day — coded, edited, and published.*
 
@@ -47,7 +47,7 @@ Flutter UI         Animations          API Integration      Firebase           C
 
 ### 🎨 Phase 1 — Flutter UI Design `Day 01 – Day 40`
 
-> **40 unique UI screens designed from scratch.**
+> **40 unique UI designed from scratch.**
 
 Focused on mastering Flutter widgets, layouts, and design principles to build pixel-perfect mobile interfaces. Each day brought a new UI challenge — from simple cards to complex multi-screen designs.
 
@@ -105,7 +105,6 @@ Integrated Google Firebase's ecosystem into Flutter to build apps with real auth
 - 🗄️ **Cloud Firestore** — Real-time database, queries, streams
 - 📦 **Firebase Storage** — File & image uploads/downloads
 - 🔔 **Firebase Cloud Messaging** — Push notifications
-- ⚡ **Cloud Functions** — Serverless backend logic
 - 🧩 **Firebase Extensions** — Ready-made backend solutions
 
 ---
@@ -195,7 +194,6 @@ flutter run
 | 🌐 APIs Integrated | 20+ |
 | 🔥 Firebase Projects | 20+ |
 | 📹 Videos Published | 100 |
-| 💻 Days with a Commit | 100 |
 
 ---
 
@@ -204,8 +202,7 @@ flutter run
 If this project helped you or inspired you, please consider:
 
 - ⭐ **Starring this repository**
-- 📺 **Subscribing to the YouTube channel**
-- 🔔 **Turning on notifications** so you don't miss new content
+- 📺 **Watch Video on YouTube channel**
 
 <div align="center">
 
@@ -213,13 +210,6 @@ If this project helped you or inspired you, please consider:
 
 </div>
 
----
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 <div align="center">
 
