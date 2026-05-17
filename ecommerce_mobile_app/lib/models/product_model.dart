@@ -98,7 +98,7 @@ final List<Product> all = [
     title: "Watch",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/watch.png",
+    image: "images/men_fashion/watch.png",
     price: 1000,
     seller: "Jacket Store",
     colors: [
@@ -115,7 +115,7 @@ final List<Product> all = [
     title: "Air Jordan",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/Air Jordan.png",
+    image: "images/shoes/Air_Jordan.png",
     price: 255,
     seller: "The Seller",
     colors: [
@@ -149,7 +149,7 @@ final List<Product> all = [
     title: "Wedding Ring",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/wedding ring.png",
+    image: "images/jewelry/wedding_ring.png",
     price: 155,
     seller: "I Am Seller",
     colors: [
@@ -166,7 +166,7 @@ final List<Product> all = [
     title: "  Pants",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/pants.png",
+    image: "images/women_fashion/pants.png",
     price: 155,
     seller: "PK Store",
     colors: [
@@ -186,7 +186,7 @@ final List<Product> shoes = [
     title: "Air Jordan",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/Air Jordan.png",
+    image: "images/shoes/Air_Jordan.png",
     price: 255,
     seller: "The Seller",
     colors: [
@@ -203,7 +203,7 @@ final List<Product> shoes = [
     title: "Vans Old Skool",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/vans old skool.png",
+    image: "images/shoes/vansold_skool.png",
     price: 300,
     seller: "Mrs Store",
     colors: [
@@ -237,7 +237,7 @@ final List<Product> shoes = [
     title: "Sports Shoes",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/sports shoes.png",
+    image: "images/shoes/sports_shoes.png",
     price: 155,
     seller: "Hari Store",
     colors: [
@@ -254,7 +254,7 @@ final List<Product> shoes = [
     title: "White Sneaker",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/shoes/white sneaker.png",
+    image: "images/shoes/white_sneaker.png",
     price: 1000,
     seller: "Jacket Store",
     colors: [
@@ -276,7 +276,7 @@ final List<Product> beauty = [
     title: "Face Care Product",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/beauty/face care.png",
+    image: "images/beauty/face_care.png",
     price: 1500,
     seller: "Yojana Seller",
     colors: [
@@ -310,7 +310,7 @@ final List<Product> beauty = [
     title: "Skin-Care Product",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/beauty/skin-care.png",
+    image: "images/beauty/skin_care.png",
     price: 999,
     seller: "Mr Beast",
     colors: [
@@ -331,7 +331,7 @@ final List<Product> womenFashion = [
     title: " Women Kurta",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/kurta.png",
+    image: "images/women_fashion/kurta.png",
     price: 299,
     seller: "Sila Store",
     colors: [
@@ -348,7 +348,7 @@ final List<Product> womenFashion = [
     title: "Mens Jacket",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/lehenga.png",
+    image: "images/women_fashion/lehenga.png",
     price: 666,
     seller: "My Store",
     colors: [
@@ -365,7 +365,7 @@ final List<Product> womenFashion = [
     title: "T-Shert",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/t-shert.png",
+    image: "images/women_fashion/t_shert.png",
     price: 155,
     seller: "Love Store",
     colors: [
@@ -382,7 +382,7 @@ final List<Product> womenFashion = [
     title: "  Pants",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/women fashion/pants.png",
+    image: "images/women_fashion/pants.png",
     price: 155,
     seller: "PK Store",
     colors: [
@@ -419,7 +419,7 @@ Product(
     title: "Jewelry-Box",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/jewelry-box.png",
+    image: "images/jewelry/jewelry_box.png",
     price: 300,
     seller: "Love Love",
     colors: [
@@ -436,7 +436,7 @@ Product(
     title: "Wedding Ring",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/wedding ring.png",
+    image: "images/jewelry/wedding_ring.png",
     price: 155,
     seller: "I Am Seller",
     colors: [
@@ -453,7 +453,7 @@ Product(
     title: "Necklace-Jewellery",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/jewelry/necklace-jewellery.png",
+    image: "images/jewelry/necklace_jewellery.png",
     price: 5000,
     seller: "Jewellery Store",
     colors: [
@@ -473,7 +473,7 @@ final List<Product> menFashion = [
     title: "Man Jacket",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/man jacket.png",
+    image: "images/men_fashion/man_jacket.png",
     price: 500,
     seller: "Men Store",
     colors: [
@@ -490,7 +490,7 @@ final List<Product> menFashion = [
     title: "Men Pants",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/pants.png",
+    image: "images/men_fashion/pants.png",
     price: 400,
     seller: "My Store",
     colors: [
@@ -507,7 +507,7 @@ final List<Product> menFashion = [
     title: "Men Shert",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/shert.png",
+    image: "images/men_fashion/shert.png",
     price: 300,
     seller: "Roman Store",
     colors: [
@@ -524,7 +524,7 @@ final List<Product> menFashion = [
     title: "T-Shirt",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/t-shirt.png",
+    image: "images/men_fashion/t_shirt.png",
     price: 200,
     seller: "Hot Store",
     colors: [
@@ -541,7 +541,7 @@ final List<Product> menFashion = [
     title: "Watch",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec massa sapien faucibus et molestie ac feugiat. In massa tempor nec feugiat nisl. Libero id faucibus nisl tincidunt.",
-    image: "images/men fashion/watch.png",
+    image: "images/men_fashion/watch.png",
     price: 1000,
     seller: "Jacket Store",
     colors: [
